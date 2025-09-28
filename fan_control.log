@@ -1,0 +1,1015 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'BOARD8', 'GPIO14', 'BCM14', 14, 'J8:8', 'WPI15', '14'}), pull='', row=4, col=2, interfaces=frozenset({'', 'uart', 'dpi', 'gpio', 'spi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'J8:8', 'BOARD8', 'WPI15', '14', 'BCM14', 'GPIO14', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'spi', 'uart', 'gpio', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'J8:8', 'GPIO14', 'WPI15', 'BCM14', 'BOARD8', '14', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'spi', 'uart', 'gpio', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'WPI15', '14', 'BOARD8', 'BCM14', 'GPIO14', 'J8:8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'uart', 'gpio', 'spi', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'J8:8', 'GPIO14', '14', 'BCM14', 'BOARD8', 14, 'WPI15'}), pull='', row=4, col=2, interfaces=frozenset({'', 'gpio', 'uart', 'spi', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'J8:8', 'BOARD8', 'BCM14', 'GPIO14', '14', 'WPI15', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'spi', 'gpio', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'J8:8', 'BCM14', 'BOARD8', 'WPI15', '14', 'GPIO14', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'spi', 'gpio', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'J8:8', 'WPI15', 'BCM14', 'GPIO14', 'BOARD8', '14', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'uart', 'dpi', 'spi', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'BOARD8', 'WPI15', 'GPIO14', 'J8:8', 'BCM14', 14, '14'}), pull='', row=4, col=2, interfaces=frozenset({'uart', '', 'gpio', 'dpi', 'spi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'WPI15', 'BCM14', '14', 'BOARD8', 'J8:8', 'GPIO14', 14}), pull='', row=4, col=2, interfaces=frozenset({'gpio', '', 'spi', 'uart', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'BOARD8', 'J8:8', 'GPIO14', '14', 'WPI15', 14, 'BCM14'}), pull='', row=4, col=2, interfaces=frozenset({'', 'spi', 'uart', 'gpio', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'BCM14', 'WPI15', '14', 'BOARD8', 'GPIO14', 'J8:8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'uart', 'spi', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'J8:8', 'BOARD8', 'WPI15', 'GPIO14', 'BCM14', '14', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'spi', 'gpio', 'uart', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'BOARD8', 'BCM14', 14, 'J8:8', 'WPI15', '14', 'GPIO14'}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'uart', 'spi', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'BCM14', 'WPI15', 'GPIO14', 'J8:8', '14', 'BOARD8', 14}), pull='', row=4, col=2, interfaces=frozenset({'uart', '', 'gpio', 'spi', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'GPIO14', 'J8:8', 'BCM14', 'BOARD8', '14', 14, 'WPI15'}), pull='', row=4, col=2, interfaces=frozenset({'', 'spi', 'dpi', 'gpio', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'14', 'BOARD8', 'BCM14', 'WPI15', 'GPIO14', 'J8:8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'uart', 'spi', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'J8:8', 'GPIO14', '14', 'BOARD8', 'BCM14', 'WPI15', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'spi', 'gpio', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'GPIO14', 'WPI15', '14', 'J8:8', 'BCM14', 14, 'BOARD8'}), pull='', row=4, col=2, interfaces=frozenset({'gpio', '', 'spi', 'dpi', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'14', 'WPI15', 'J8:8', 'BCM14', 'GPIO14', 'BOARD8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'gpio', 'spi', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'GPIO14', 'BCM14', '14', 'WPI15', 'J8:8', 'BOARD8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'spi', 'uart', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'14', 14, 'WPI15', 'GPIO14', 'J8:8', 'BCM14', 'BOARD8'}), pull='', row=4, col=2, interfaces=frozenset({'', 'gpio', 'spi', 'dpi', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'GPIO14', 'BOARD8', 'BCM14', '14', 'WPI15', 'J8:8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'uart', 'gpio', 'spi', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'GPIO14', 'BCM14', 'WPI15', '14', 'BOARD8', 'J8:8', 14}), pull='', row=4, col=2, interfaces=frozenset({'gpio', '', 'uart', 'spi', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'GPIO14', '14', 'WPI15', 'J8:8', 'BCM14', 'BOARD8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'spi', 'uart', 'gpio', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'GPIO14', '14', 'WPI15', 'BCM14', 'BOARD8', 'J8:8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'dpi', 'spi', 'uart', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'BOARD8', '14', 'J8:8', 'BCM14', 'WPI15', 'GPIO14', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'uart', 'gpio', 'spi', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'WPI15', 'BOARD8', '14', 'BCM14', 'GPIO14', 'J8:8', 14}), pull='', row=4, col=2, interfaces=frozenset({'', 'spi', 'dpi', 'gpio', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=8, name='GPIO14', names=frozenset({'WPI15', 'GPIO14', 'BOARD8', '14', 'J8:8', 14, 'BCM14'}), pull='', row=4, col=2, interfaces=frozenset({'', 'gpio', 'dpi', 'spi', 'uart'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/felixlu/drone_cv/fan_control.py", line 11, in <module>
+    fan = DigitalOutputDevice(FAN_PIN, active_high=not ACTIVE_LOW, initial_value=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/usr/lib/python3/dist-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/usr/lib/python3/dist-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
