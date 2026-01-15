@@ -1,44 +1,37 @@
-# 🚁 CV_Drone - Computer Vision Enabled Autonomous Drone System
+# CV_Drone
 
-A sophisticated autonomous drone control system integrating computer vision, real-time object detection, and MAVLink-based flight control for Raspberry Pi-powered UAVs.
+An autonomous drone control system integrating computer vision with MAVLink-based flight control on Raspberry Pi.
 
-## 🎯 Project Overview
+## Overview
 
-CV_Drone is a comprehensive autonomous drone platform that combines:
-- **Real-time Computer Vision** using YOLO models for object detection and segmentation
-- **Autonomous Flight Control** via DroneKit and MAVLink protocol
-- **Live Video Streaming** with embedded AI inference
-- **Telemetry Monitoring** with high-rate sensor data collection
-- **Hardware Management** including thermal control systems
+CV_Drone combines real-time computer vision using YOLO models with autonomous flight control via DroneKit and the MAVLink protocol. The system runs on a Raspberry Pi mounted on a drone, providing object detection, live video streaming, telemetry monitoring, and thermal management.
 
-This project demonstrates full-stack robotics development from low-level hardware interfacing to high-level autonomous navigation.
+## Features
 
-## ✨ Key Features
+### Computer Vision
+- Real-time object detection using YOLOv8n and YOLO-E 11s segmentation models
+- Live video processing at 800x800 resolution with FPS monitoring
+- Flask-based MJPEG streaming for remote viewing
+- Inference optimization for Raspberry Pi hardware
 
-### 🤖 Computer Vision
-- **YOLO-based Object Detection**: Real-time object detection using YOLOv8n and YOLO-E 11s segmentation models
-- **Live Video Processing**: 800x800 resolution with FPS monitoring and performance metrics
-- **Web Streaming**: Flask-based MJPEG streaming for remote monitoring
-- **Optimized Inference**: Tuned for Raspberry Pi hardware with configurable confidence thresholds
+### Autonomous Flight
+- DroneKit Python API for MAVLink communication with ArduPilot/PX4 flight controllers
+- SITL (Software-in-the-loop) simulation support for testing
+- Programmed autonomous maneuvers including takeoff, navigation, and landing
+- Body-frame velocity control for precise movement
 
-### ✈️ Autonomous Flight
-- **DroneKit Integration**: Python API for MAVLink communication with ArduPilot/PX4
-- **SITL Support**: Software-in-the-loop simulation for safe development and testing
-- **Autonomous Maneuvers**: Pre-programmed takeoff, navigation, and landing sequences
-- **Body-Frame Velocity Control**: Precise movement commands in drone's reference frame
+### Telemetry & Monitoring
+- Data logging for GPS, attitude, velocity, battery, and sensors
+- Configurable message streaming rates up to 10Hz
+- CSV export for post-flight analysis
+- EKF (Extended Kalman Filter) status monitoring
 
-### 📊 Telemetry & Monitoring
-- **Comprehensive Data Logging**: GPS, attitude, velocity, battery, and sensor data
-- **High-Rate Streaming**: Configurable message rates up to 10Hz
-- **CSV Export**: Timestamped telemetry data for post-flight analysis
-- **EKF Status Monitoring**: Extended Kalman Filter health checks
+### System Management
+- Automatic fan control with temperature-based hysteresis
+- GPIO hardware interfacing via gpiozero
+- ARM architecture optimization
 
-### 🔧 System Management
-- **Thermal Control**: Automatic fan control with hysteresis to prevent thermal throttling
-- **GPIO Management**: Hardware interfacing via gpiozero
-- **Raspberry Pi Optimization**: Tailored for ARM architecture
-
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -70,38 +63,38 @@ This project demonstrates full-stack robotics development from low-level hardwar
 └─────────────────────────┘
 ```
 
-## 🛠️ Technologies Used
+## Technologies
 
-### Core Technologies
-- **Python 3.x**: Primary programming language
-- **DroneKit**: Python API for MAVLink vehicle control
-- **Ultralytics YOLO**: State-of-the-art object detection
-- **OpenCV**: Computer vision and image processing
-- **Flask**: Web framework for video streaming
+### Core
+- Python 3.x
+- DroneKit - Python API for MAVLink vehicle control
+- Ultralytics YOLO - Object detection framework
+- OpenCV - Computer vision library
+- Flask - Web framework for video streaming
 
-### Hardware Integration
-- **PiCamera2**: Raspberry Pi camera interface
-- **gpiozero**: GPIO control for peripherals
-- **MAVLink**: Micro Air Vehicle communication protocol
+### Hardware
+- PiCamera2 - Raspberry Pi camera interface
+- gpiozero - GPIO control library
+- MAVLink - Micro Air Vehicle communication protocol
 
-### Development & Testing
-- **SITL (Software In The Loop)**: Safe simulation environment
-- **ArduPilot/PX4**: Open-source flight controller firmware
+### Development
+- SITL (Software In The Loop) - Flight simulation
+- ArduPilot/PX4 - Open-source autopilot firmware
 
-## 📋 Hardware Requirements
+## Hardware Requirements
 
 ### Required
-- **Raspberry Pi 4/5** (4GB+ RAM recommended)
-- **Raspberry Pi Camera Module** (v2 or HQ camera)
-- **Flight Controller** with MAVLink support (Pixhawk, Cube, etc.)
-- **Drone Frame** with motors, ESCs, and power system
+- Raspberry Pi 4/5 (4GB+ RAM recommended)
+- Raspberry Pi Camera Module (v2 or HQ camera)
+- Flight Controller with MAVLink support (Pixhawk, Cube, etc.)
+- Drone frame with motors, ESCs, and power system
 
 ### Optional
-- **Cooling Fan** with transistor/relay for thermal management
-- **GPS Module** (typically included with flight controller)
-- **Telemetry Radio** for long-range communication
+- Cooling fan with transistor/relay
+- GPS module (typically included with flight controller)
+- Telemetry radio for long-range communication
 
-## 🚀 Installation
+## Installation
 
 ### 1. System Setup (Raspberry Pi)
 
@@ -133,43 +126,41 @@ pip3 install gpiozero RPi.GPIO
 
 Download pre-trained models:
 ```bash
-# YOLOv8 nano (general object detection)
+# YOLOv8 nano for general object detection
 wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt
 
-# YOLO-E 11s segmentation (if needed)
+# YOLO-E 11s segmentation model (if needed)
 # Model file: yoloe-11s-seg.pt
 ```
 
 ### 4. Hardware Connections
 
-**Flight Controller to Raspberry Pi:**
+Flight Controller to Raspberry Pi:
 - USB: `/dev/ttyUSB0` or `/dev/ttyACM0`
 - UART (GPIO): `/dev/ttyAMA0` or `/dev/serial0`
 - Network: UDP connection for SITL or wireless telemetry
 
-**Camera:** Connect via CSI ribbon cable
+Camera: Connect via CSI ribbon cable
 
-**Fan (optional):** GPIO 14 via transistor/relay
+Fan (optional): GPIO 14 via transistor/relay
 
-## 💻 Usage
+## Usage
 
 ### Computer Vision Demo (Local Display)
 
-Run real-time object detection with local display:
+Real-time object detection with local display:
 ```bash
 python3 cv_demo.py
 ```
-- Press 'q' to quit
-- Shows FPS overlay and bounding boxes
+Press 'q' to quit. Shows FPS overlay and bounding boxes.
 
 ### Web Streaming Server
 
-Stream video with YOLO inference to web browser:
+Stream video with YOLO inference to a web browser:
 ```bash
 python3 app.py
 ```
-- Access at: `http://<raspberry-pi-ip>:8000`
-- View stream at: `http://<raspberry-pi-ip>:8000/video`
+Access at `http://<raspberry-pi-ip>:8000` or view stream at `http://<raspberry-pi-ip>:8000/video`
 
 ### Autonomous Flight Demo
 
@@ -178,17 +169,13 @@ python3 app.py
 python3 auto_demo.py
 ```
 
-This script:
-1. Connects to flight controller via UDP
-2. Arms and takes off to 10 meters
-3. Flies forward at 1 m/s for 5 seconds
-4. Lands autonomously
+The script connects to the flight controller via UDP, arms and takes off to 10 meters, flies forward at 1 m/s for 5 seconds, then lands autonomously.
 
-⚠️ **Safety Warning**: Test in SITL first! Ensure adequate space and safety measures.
+WARNING: Test in SITL simulation first. Ensure adequate space and safety measures before flying real hardware.
 
 ### Telemetry Monitoring
 
-Monitor drone state and log data:
+Monitor drone state and log telemetry data:
 ```bash
 # Real flight controller over USB
 python3 autonomous_telemetry.py --conn /dev/ttyUSB0 --baud 115200 --csv telem.csv
@@ -200,13 +187,7 @@ python3 autonomous_telemetry.py --conn udp:0.0.0.0:14550 --csv telem.csv
 python3 autonomous_telemetry.py --conn /dev/ttyUSB0 --hz 20 --csv flight_data.csv
 ```
 
-Output includes:
-- GPS fix, satellite count, position
-- Attitude (roll, pitch, yaw)
-- Velocity, groundspeed, heading
-- Battery voltage and current
-- Rangefinder distance
-- EKF status
+Output includes GPS fix, satellite count, position, attitude (roll/pitch/yaw), velocity, groundspeed, heading, battery voltage/current, rangefinder distance, and EKF status.
 
 ### SITL Simulation Testing
 
@@ -227,11 +208,9 @@ Run fan control daemon:
 ```bash
 python3 fan_control.py
 ```
-- Turns fan ON at 45°C
-- Turns fan OFF at 40°C
-- Logs state changes and periodic heartbeat
+Turns fan on at 45°C and off at 40°C. Logs state changes and periodic status.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CV_Drone/
@@ -247,88 +226,77 @@ CV_Drone/
 └── telem.csv                   # Telemetry data logs
 ```
 
-## 🎓 Key Concepts Demonstrated
+## Technical Implementation
 
-### Software Engineering
-- **Modular Architecture**: Separated concerns (CV, flight control, hardware)
-- **Error Handling**: Timeouts, exception handling, graceful degradation
-- **Configuration Management**: Argparse for CLI configuration
-- **Data Persistence**: CSV logging for telemetry data
+### Software Architecture
+- Modular design separating computer vision, flight control, and hardware management
+- Error handling with timeouts and graceful degradation
+- Command-line configuration via argparse
+- CSV-based data persistence for telemetry
 
-### Robotics & Control Systems
-- **MAVLink Protocol**: Industry-standard drone communication
-- **State Machines**: Mode management and flight state transitions
-- **Sensor Fusion**: EKF health monitoring
-- **Real-time Systems**: High-rate data streaming and processing
+### Robotics & Control
+- MAVLink protocol implementation for drone communication
+- State machine management for flight modes
+- EKF sensor fusion monitoring
+- High-rate data streaming and processing
 
 ### Computer Vision
-- **Deep Learning Inference**: Optimized YOLO deployment
-- **Real-time Processing**: Frame capture, inference, and display pipeline
-- **Performance Optimization**: FPS monitoring and model selection
+- Optimized YOLO model deployment on embedded hardware
+- Real-time frame capture, inference, and display pipeline
+- FPS monitoring and performance tuning
 
 ### Hardware Integration
-- **GPIO Control**: Direct hardware interfacing
-- **Camera Interface**: CSI camera integration via PiCamera2
-- **Serial Communication**: UART/USB connections to flight hardware
+- Direct GPIO control for peripherals
+- CSI camera interface via PiCamera2
+- Serial/UART communication with flight hardware
 
-## 🔮 Future Improvements
+## Future Work
 
-- [ ] **Vision-based Navigation**: Use object detection for autonomous waypoint navigation
-- [ ] **Collision Avoidance**: Integrate obstacle detection with flight control
-- [ ] **Mission Planning**: Implement complex flight plans with CV-triggered events
-- [ ] **Multi-drone Coordination**: Swarm behavior with visual markers
-- [ ] **Advanced Tracking**: Follow-me mode using person detection
-- [ ] **Gimbal Control**: Camera stabilization and pointing
-- [ ] **Cloud Integration**: Remote monitoring dashboard
-- [ ] **ROS 2 Bridge**: Integration with Robot Operating System
+- Vision-based navigation using object detection for autonomous waypoints
+- Collision avoidance integrating obstacle detection with flight control
+- Complex mission planning with CV-triggered events
+- Multi-drone coordination with visual markers
+- Follow-me mode using person detection
+- Gimbal control for camera stabilization
+- Remote monitoring dashboard
+- ROS 2 integration
 
-## 📊 Performance
+## Performance
 
 ### YOLO Inference (Raspberry Pi 4)
-- **YOLOv8n**: ~5-8 FPS at 320x320 input
-- **YOLO-E 11s-seg**: ~3-5 FPS at 800x800 input
-- **Latency**: 125-200ms per frame
+- YOLOv8n: ~5-8 FPS at 320x320 input
+- YOLO-E 11s-seg: ~3-5 FPS at 800x800 input
+- Latency: 125-200ms per frame
 
 ### Telemetry Rates
-- **Position/Attitude**: Up to 10 Hz
-- **GPS/Health**: 2 Hz
-- **CSV Logging**: Real-time with minimal overhead
+- Position/Attitude: Up to 10 Hz
+- GPS/Health: 2 Hz
+- CSV logging: Real-time with minimal overhead
 
-## 🔒 Safety Considerations
+## Safety
 
-⚠️ **Important Safety Notes:**
+Important considerations for UAV operation:
 
-1. **Always test in SITL first** before deploying to real hardware
-2. **Maintain visual line of sight** during flight operations
-3. **Follow local regulations** for UAV operation
-4. **Use a safety pilot** with manual override capability
-5. **Test in open areas** away from people and obstacles
-6. **Monitor battery levels** - autonomous landing triggers at low voltage
-7. **Verify GPS lock** before arming (6+ satellites recommended)
-8. **Implement failsafes** - RTL (Return to Launch) on signal loss
+1. Always test in SITL simulation before deploying to real hardware
+2. Maintain visual line of sight during flight operations
+3. Follow local regulations for UAV operation
+4. Use a safety pilot with manual override capability
+5. Test in open areas away from people and obstacles
+6. Monitor battery levels - autonomous landing triggers at low voltage
+7. Verify GPS lock before arming (6+ satellites recommended)
+8. Implement failsafes such as RTL (Return to Launch) on signal loss
 
-## 👨‍💻 Author
+## Author
 
-**Felix Lu**
+Felix Lu
 
-This project showcases skills in:
-- Embedded systems programming (Raspberry Pi)
-- Real-time computer vision and deep learning
-- Autonomous vehicle control systems
-- Hardware-software integration
-- Python development for robotics applications
-
-## 📄 License
+## License
 
 This project is provided as-is for educational and demonstration purposes.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- **DroneKit-Python**: Excellent MAVLink abstraction layer
-- **Ultralytics**: State-of-the-art YOLO implementation
-- **ArduPilot**: Robust open-source autopilot
-- **Raspberry Pi Foundation**: Accessible embedded computing platform
-
----
-
-**⚡ Built with passion for robotics and autonomous systems**
+- DroneKit-Python for MAVLink abstraction
+- Ultralytics for YOLO implementation
+- ArduPilot open-source autopilot
+- Raspberry Pi Foundation
