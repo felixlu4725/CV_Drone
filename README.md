@@ -31,38 +31,6 @@ CV_Drone combines real-time computer vision using YOLO models with autonomous fl
 - GPIO hardware interfacing via gpiozero
 - ARM architecture optimization
 
-## Architecture
-
-```
-┌─────────────────────────────────────────────────┐
-│             Raspberry Pi                         │
-│  ┌──────────────┐         ┌──────────────┐     │
-│  │  PiCamera2   │────────▶│  YOLO Model  │     │
-│  │  (800x800)   │         │  Inference   │     │
-│  └──────────────┘         └──────────────┘     │
-│         │                        │              │
-│         ▼                        ▼              │
-│  ┌──────────────────────────────────────┐      │
-│  │     Flask Web Server / CV Demo       │      │
-│  │   (Real-time streaming + overlay)    │      │
-│  └──────────────────────────────────────┘      │
-│                                                  │
-│  ┌──────────────────────────────────────┐      │
-│  │      DroneKit / MAVLink Layer        │      │
-│  │  (Telemetry + Flight Commands)       │      │
-│  └──────────────────────────────────────┘      │
-│         │                                       │
-└─────────┼───────────────────────────────────────┘
-          │ UDP/Serial
-          ▼
-┌─────────────────────────┐
-│   Flight Controller     │
-│   (ArduPilot/PX4)       │
-│   - Real hardware       │
-│   - SITL simulation     │
-└─────────────────────────┘
-```
-
 ## Technologies
 
 ### Core
