@@ -1,4 +1,5 @@
 # CV_Drone
+<img width="890" height="521" alt="image" src="https://github.com/user-attachments/assets/d33054f9-57d4-43fa-80b0-1683fdc92d65" />
 
 An autonomous drone control system integrating computer vision with MAVLink-based flight control on Raspberry Pi.
 
