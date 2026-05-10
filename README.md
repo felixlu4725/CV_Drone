@@ -2,6 +2,9 @@
 
 An autonomous drone control system integrating computer vision with MAVLink-based flight control on Raspberry Pi.
 
+<img width="1027" height="659" alt="dronee" src="https://github.com/user-attachments/assets/df00454a-8036-4dc5-a402-ec1e3d2b4c10" />
+
+
 ## Overview
 
 CV_Drone combines real-time computer vision using YOLO models with autonomous flight control via DroneKit and the MAVLink protocol. The system runs on a Raspberry Pi mounted on a drone, providing object detection, live video streaming, telemetry monitoring, and thermal management.
